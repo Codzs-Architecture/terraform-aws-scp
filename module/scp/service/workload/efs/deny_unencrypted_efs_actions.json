@@ -1,0 +1,9 @@
+{
+  "Sid": "DenyUnencryptedEfs",
+  "Action" : [
+    "elasticfilesystem:CreateFileSystem"
+  ],
+  "Resource": "*",
+  "Effect": "Deny",
+  "Condition": { "StringEquals" : { "elasticfilesystem:Encrypted" : "false" }}
+}

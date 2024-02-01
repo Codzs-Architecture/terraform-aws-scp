@@ -1,0 +1,17 @@
+{
+  "Sid": "RequireMFA",
+  "Action": [
+    "iam:CreateVirtualMFADevice",
+    "iam:EnableMFADevice",
+    "iam:GetUser",
+    "iam:ListMFADevices",
+    "iam:ListVirtualMFADevices",
+    "iam:ResyncMFADevice",
+    "sts:GetSessionToken"
+  ],
+  "Resource": [
+    "*"
+  ],
+  "Effect": "Deny",
+  "Condition": { "BoolIfExists" : { "aws:MultiFactorAuthPresent" : "false" }}
+}

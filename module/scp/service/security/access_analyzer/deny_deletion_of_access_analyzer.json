@@ -1,0 +1,13 @@
+{
+    "Sid": "DenyAccessAnalyzer",
+    "Effect": "Deny",
+    "Action": [
+        "access-analyzer:ApplyArchiveRule",
+        "access-analyzer:CreateArchiveRule",
+        "access-analyzer:DeleteAnalyzer",
+        "access-analyzer:DeleteArchiveRule",
+        "access-analyzer:UpdateArchiveRule",
+        "access-analyzer:UpdateFindings"
+    ],
+    "Resource": "*"
+}

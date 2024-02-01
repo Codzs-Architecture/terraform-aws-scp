@@ -1,0 +1,12 @@
+{
+    "Sid": "DenyVpcFlowDelete",
+    "Action": [
+      "ec2:DeleteFlowLogs",
+      "logs:DeleteLogGroup",
+      "logs:DeleteLogStream"
+    ],
+    "Resource": [
+      "*"
+    ],
+    "Effect": "Deny"
+  }

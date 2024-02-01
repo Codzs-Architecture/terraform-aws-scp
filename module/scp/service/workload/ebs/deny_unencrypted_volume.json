@@ -1,0 +1,10 @@
+{
+    "Effect": "Deny",
+    "Action": "ec2:CreateVolume",
+    "Resource": "*",
+    "Condition": {
+        "Bool": {
+        "ec2:Encrypted": "false"
+        }
+    }
+}

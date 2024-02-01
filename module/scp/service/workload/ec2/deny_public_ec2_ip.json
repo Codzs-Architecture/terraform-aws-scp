@@ -1,0 +1,11 @@
+{
+  "Sid": "DenyEc2PublicIp",
+  "Action": [
+    "ec2:RunInstances"
+  ],
+  "Resource": [
+    "arn:aws:ec2:*:*:network-interface/*"
+  ],
+  "Effect": "Deny",
+  "Condition": { "StringEquals" : { "ec2:AssociatePublicIpAddress" : "true" }}
+}

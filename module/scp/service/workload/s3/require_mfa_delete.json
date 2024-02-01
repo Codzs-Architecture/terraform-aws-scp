@@ -1,0 +1,11 @@
+{
+  "Sid": "RequireMFAS3Delete",
+  "Action": [
+    "s3:DeleteObject"
+  ],
+  "Resource": [
+    "arn:aws:s3:::*/*"
+  ],
+  "Effect": "Deny",
+  "Condition": { "BoolIfExists" : { "aws:MultiFactorAuthPresent" : "false" }}
+}

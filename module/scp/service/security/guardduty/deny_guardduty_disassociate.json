@@ -1,0 +1,8 @@
+{
+  "Sid": "DenyGuardDutyDisassociation",
+  "Action": [
+    "guardduty:DisassociateFromMasterAccount"
+  ],
+  "Resource": "*",
+  "Effect": "Deny"
+}
