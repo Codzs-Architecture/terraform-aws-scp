@@ -1,5 +1,3 @@
-region = "ap-southeast-2"
-
 name_tag_key = "Name"
 
 environment_tag_key   = "Environment"

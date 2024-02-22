@@ -1,8 +1,3 @@
-variable "region" {
-  description = "Default region for the mgmt account."
-  type        = string
-}
-
 variable "workload_ou_type_name" {
   description = "Worload type for this scp needs to be applied: prod/np"
   type        = string
