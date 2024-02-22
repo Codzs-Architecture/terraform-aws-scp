@@ -35,9 +35,3 @@ enforce_for_values = ["dynamodb:*", "ec2:dhcp-options", "ec2:elastic-ip", "ec2:f
   "lambda:*", "rds:cluster-pg", "rds:cluster-endpoint", "rds:es", "rds:og", "rds:pg", "rds:db-proxy",
   "rds:db-proxy-endpoint", "rds:ri", "rds:secgrp", "rds:subgrp", "rds:target-group", "resource-groups:*",
 "route53:hostedzone", "s3:bucket", "s3:bucket"]
-
-
-policy_costcenter_tag_value = "technology"
-policy_application_tag_value = "shared"
-policy_platform_tag_value = "shared"
-policy_department_tag_value = "platform"
