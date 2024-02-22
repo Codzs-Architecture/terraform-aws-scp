@@ -3,6 +3,7 @@ module "scp_non_prod_workload_ou" {
 
   workload_ou_id = data.aws_organizations_organizational_unit.workload_ou_type.id
 
+  application_name = local.application_name
   instance_type                 = var.instance_type
   instance_size                 = var.instance_size
   imdsv2_max_hop                = var.imdsv2_max_hop
@@ -10,8 +11,8 @@ module "scp_non_prod_workload_ou" {
   environment_tag_key           = var.environment_tag_key
   environment_tag_value         = var.environment_tag_value
   owner_tag_key                 = var.owner_tag_key
-  owner_tag_value               = var.owner_tag_value
-  policy_owner_tag_value        = var.policy_owner_tag_value
+  owner_tag_value               = [local.application_name]
+  policy_owner_tag_value        = local.application_name
   costcenter_tag_key            = var.costcenter_tag_key
   costcenter_tag_value          = var.costcenter_tag_value
   policy_costcenter_tag_value   = var.policy_costcenter_tag_value
@@ -22,8 +23,8 @@ module "scp_non_prod_workload_ou" {
   platform_tag_value            = var.platform_tag_value
   policy_platform_tag_value     = var.policy_platform_tag_value
   organization_tag_key          = var.organization_tag_key
-  organization_tag_value        = var.organization_tag_value
-  policy_organization_tag_value = var.policy_organization_tag_value
+  organization_tag_value        = [local.application_name]
+  policy_organization_tag_value = local.application_name
   department_tag_key            = var.department_tag_key
   department_tag_value          = var.department_tag_value
   policy_department_tag_value   = var.policy_department_tag_value

@@ -1,7 +1,7 @@
 # Create Tag Policy
 resource "aws_organizations_policy" "tag_policy" {
-  name        = "Codzs Custom Tag Policies - ${terraform.workspace}"
-  description = "Codzs custom tag policies to deny via SCP."
+  name        = "${local.application_name} Custom Tag Policies - ${terraform.workspace}"
+  description = "${local.application_name} custom tag policies to deny via SCP."
 
   content = jsonencode({
     "tags" = {
@@ -59,7 +59,7 @@ resource "aws_organizations_policy" "tag_policy" {
   type = "TAG_POLICY"
 
   tags  = {
-    "${var.name_tag_key}": "Codzs Custom Tag Policies - ${terraform.workspace}",
+    "${var.name_tag_key}": "${local.application_name} Custom Tag Policies - ${terraform.workspace}",
     "${var.environment_tag_key}": "${terraform.workspace}",
     "${var.owner_tag_key}": "${var.policy_owner_tag_value}",
     "${var.costcenter_tag_key}": "${var.policy_costcenter_tag_value}",

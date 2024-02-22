@@ -142,3 +142,8 @@ variable "enforce_for_values" {
   type        = list(string)
   description = "A list of tag values to enforce for the 'Application' tag."
 }
+
+variable "application_name" {
+  type        = string
+  description = "Application name for the organization"
+}

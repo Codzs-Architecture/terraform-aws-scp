@@ -3,10 +3,9 @@ region = "ap-southeast-2"
 name_tag_key = "Name"
 
 environment_tag_key   = "Environment"
-environment_tag_value = ["dev", "qa", "uat", "prod"]
+environment_tag_value = ["dev", "qa", "uat", "np", "prod"]
 
 owner_tag_key   = "Owner"
-owner_tag_value = ["codzs"]
 
 costcenter_tag_key   = "CostCenter"
 costcenter_tag_value = ["technology", "growth", "sale", "catalogue", "finance", "operation", "customercare"]
@@ -18,7 +17,6 @@ platform_tag_key   = "Platform"
 platform_tag_value = ["shared"]
 
 organization_tag_key   = "Organization"
-organization_tag_value = ["Codzs"]
 
 department_tag_key   = "Department"
 department_tag_value = ["development", "qa", "design", "product", "platform", "data", "acquasition", "retention", "sale", "catalogue", "finance", "operation", "customercare"]
@@ -39,9 +37,7 @@ enforce_for_values = ["dynamodb:*", "ec2:dhcp-options", "ec2:elastic-ip", "ec2:f
 "route53:hostedzone", "s3:bucket", "s3:bucket"]
 
 
-policy_owner_tag_value = "codzs"
 policy_costcenter_tag_value = "technology"
 policy_application_tag_value = "shared"
 policy_platform_tag_value = "shared"
-policy_organization_tag_value = "Codzs"
 policy_department_tag_value = "platform"

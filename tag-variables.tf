@@ -18,16 +18,6 @@ variable "owner_tag_key" {
   description = "The tag key for the 'Owner' tag."
 }
 
-variable "owner_tag_value" {
-  type        = list(string)
-  description = "A list of valid tag values for the 'Owner' tag."
-}
-
-variable "policy_owner_tag_value" {
-  type        = string
-  description = "Owner tag value for the SCP/Tag policy."
-}
-
 variable "costcenter_tag_key" {
   type        = string
   description = "The tag key for the 'CostCenter' tag."
@@ -76,16 +66,6 @@ variable "policy_platform_tag_value" {
 variable "organization_tag_key" {
   type        = string
   description = "The tag key for the 'Organization' tag."
-}
-
-variable "organization_tag_value" {
-  type        = list(string)
-  description = "A list of valid tag values for the 'Organization' tag."
-}
-
-variable "policy_organization_tag_value" {
-  type        = string
-  description = "Organization tag value for the SCP/Tag policy."
 }
 
 variable "department_tag_key" {
