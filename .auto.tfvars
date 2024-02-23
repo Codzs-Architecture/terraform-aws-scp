@@ -1,29 +1,3 @@
-# name_tag_key = "Name"
-
-# environment_tag_key   = "Environment"
-# environment_tag_value = ["dev", "qa", "uat", "np", "prod"]
-
-# owner_tag_key   = "Owner"
-
-# costcenter_tag_key   = "CostCenter"
-# costcenter_tag_value = ["technology", "growth", "sale", "catalogue", "finance", "operation", "customercare"]
-
-# application_tag_key   = "Application"
-# application_tag_value = ["shared"]
-
-# platform_tag_key   = "Platform"
-# platform_tag_value = ["shared"]
-
-# organization_tag_key   = "Organization"
-
-# department_tag_key   = "Department"
-# department_tag_value = ["development", "qa", "design", "product", "platform", "data", "acquasition", "retention", "sale", "catalogue", "finance", "operation", "customercare"]
-
-# patch_cycle_tag_key = "PatchCycle"
-
-# power_management_tag_key   = "PowerManagement"
-# power_management_tag_value = ["TAG1", "TAG2"]
-
 enforce_for_values = ["dynamodb:*", "ec2:dhcp-options", "ec2:elastic-ip", "ec2:fpga-image", "ec2:instance",
   "ec2:internet-gateway", "ec2:launch-template", "ec2:natgateway", "ec2:network-acl",
   "ec2:network-interface", "ec2:route-table", "ec2:security-group", "ec2:snapshot",
