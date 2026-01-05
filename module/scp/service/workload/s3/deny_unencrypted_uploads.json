@@ -1,0 +1,11 @@
+{
+  "Sid": "DenyUnencryptedUploads",
+  "Action": [
+    "s3:PutObject"
+  ],
+  "Resource": [
+    "arn:aws:s3:::*/*"
+  ],
+  "Effect": "Deny",
+  "Condition": { "Null" : { "s3:x-amz-server-side-encryption" : "true" }}
+}

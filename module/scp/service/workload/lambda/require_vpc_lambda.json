@@ -1,0 +1,12 @@
+{
+  "Sid": "RequireLambdaInVpc",
+  "Action": [
+    "lambda:CreateFunction",
+    "lambda:UpdateFunctionConfiguration"
+  ],
+  "Resource": [
+    "*"
+  ],
+  "Effect": "Deny",
+  "Condition": { "Null" : { "lambda:VpcIds" : "true" }}
+}

@@ -1,0 +1,13 @@
+{
+  "Sid": "RequireMFAEC2",
+  "Action": [
+    "ec2:StopInstances",
+    "ec2:TerminateInstances",
+    "ec2:SendDiagnosticInterrupt"
+  ],
+  "Resource": [
+    "*"
+  ],
+  "Effect": "Deny",
+  "Condition": { "BoolIfExists" : { "aws:MultiFactorAuthPresent" : "false" }}
+}

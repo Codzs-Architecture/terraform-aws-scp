@@ -1,0 +1,14 @@
+{
+  "Sid": "S3RegionLockdown",
+  "Action": [
+    "s3:CreateBucket"
+  ],
+  "Resource": [
+    "arn:aws:s3:::*"
+  ],
+  "Effect": "Deny",
+  "Condition": { 
+    "StringNotLike" : { "s3locationconstraint" : "var.region_lockdown" },
+    "Null" : { "s3locationconstraint" : "false" }
+  }
+}

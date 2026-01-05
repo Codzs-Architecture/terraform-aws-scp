@@ -1,3 +1,6 @@
+export AWS_REGION="ap-southeast-2"
+
+
 # enable TAG Policy in SCP with mgmt user in Control Tower account
 # Workspace
     # terraform workspace new np

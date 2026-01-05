@@ -1,0 +1,23 @@
+{
+  "Sid": "RequireEc2ResourceTag",
+  "Action": [
+    "organizations:TagResource"
+  ],
+  "Resource": [
+    "*"
+  ],
+  "Effect": "Deny",
+  "Condition": { 
+    "Null" : { 
+      "ec2:ResourceTag/env" : "true", 
+      "ec2:ResourceTag/cost_center" : "true", 
+      "ec2:ResourceTag/app_id" : "true", 
+
+      "ec2:ResourceTag/platform" : "true", 
+      "ec2:ResourceTag/org" : "true", 
+      "ec2:ResourceTag/dept" : "true", 
+      "ec2:ResourceTag/patch_cycle" : "true", 
+      "ec2:ResourceTag/power_mgmt" : "true"
+    }
+  }
+}

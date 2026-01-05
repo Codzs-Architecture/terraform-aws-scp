@@ -1,0 +1,11 @@
+{
+  "Sid": "DenyEc2PublicAMI",
+  "Action": [
+    "ec2:RunInstances"
+  ],
+  "Resource": [
+    "arn:aws:ec2:*::image/*"
+  ],
+  "Effect": "Deny",
+  "Condition": { "StringEquals" : { "ec2:Public" : "true" }}
+}

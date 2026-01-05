@@ -1,0 +1,11 @@
+{
+  "Sid": "DenyNoTLSRequests",
+  "Action": [
+    "s3:*"
+  ],
+  "Resource": [
+    "arn:aws:s3:::*/*"
+  ],
+  "Effect": "Deny",
+  "Condition": { "Bool" : { "aws:SecureTransport" : "false" }}
+}

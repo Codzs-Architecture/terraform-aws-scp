@@ -1,0 +1,14 @@
+{
+  "Sid": "DenyShieldlRemoval",
+  "Action": [
+    "shield:DeleteProtection",
+    "shield:DeleteSubscription",
+    "shield:DisassociateDRTLogBucket",
+    "shield:DisassociateDRTRole",
+    "shield:UpdateEmergencyContactSettings"
+  ],
+  "Resource": [
+    "*"
+  ],
+  "Effect": "Deny"
+}
